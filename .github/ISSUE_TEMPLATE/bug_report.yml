@@ -1,0 +1,51 @@
+name: Bug Report
+description: Report an issue, malfunction, or unexpected behavior in Vault
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue. Please provide detailed reproduction steps.
+        If this is a security vulnerability, please do NOT use this form; refer to [SECURITY.md](https://github.com/itsgoharrehman/vault-password-manager/blob/main/SECURITY.md) instead.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the bug.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Exact steps to trigger the issue.
+      placeholder: |
+        1. Open Vault dashboard
+        2. Attempt to add credential
+        3. Observe error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should have happened.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment Information
+      description: Browser, OS, and runtime details.
+      placeholder: |
+        - Browser: Chrome 124 / Firefox 125
+        - OS: Windows 11 / macOS 14 / Ubuntu 22.04
+        - Vault Version: 1.0.x / commit SHA
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Browser Console Logs
+      description: Paste any relevant browser console errors or network traces (ensure no sensitive passwords are included).
