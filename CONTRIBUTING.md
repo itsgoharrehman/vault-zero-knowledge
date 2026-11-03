@@ -1,37 +1,35 @@
-# Contributing Guidelines
+# Contributing to Vault
 
-Thank you for your interest in contributing. We welcome contributions that improve performance, resolve bugs, enhance documentation, or expand feature capabilities.
+Thank you for your interest in contributing to Vault.
+
+## Core Development Invariants
+
+All contributions must adhere to our zero-knowledge security guarantees:
+
+1. **Zero Plaintext Transmission**: No master passwords, decrypted notes, or private keys may ever be logged to the console, cached in persistent storage, or transmitted across network requests.
+2. **WebCrypto Standard Primitives**: All cryptographic operations must strictly utilize the standard W3C WebCrypto API (`window.crypto.subtle`). Custom cryptographic algorithms or external npm crypto libraries are prohibited.
+3. **IV Freshness**: Initialization Vectors must always be 96-bit (12 bytes) cryptographically random values generated via `window.crypto.getRandomValues()`. Never hardcode, serialize, or reuse IVs across encryptions.
+4. **Zero Third-Party Telemetry**: Never introduce external analytics, remote fonts, or unvetted CDN scripts that could access DOM values or exfiltrate keystrokes.
+5. **Non-Extractable Keys**: Derived AES keys must remain non-extractable in memory (`extractable: false`).
 
 ## Code of Conduct
 
-All contributors and participants are expected to adhere to the standards described in [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+All contributors and participants are expected to adhere to our [Code of Conduct](CODE_OF_CONDUCT.md).
 
-## Getting Started
+## Development Workflow
 
 1. Fork the repository on GitHub.
 2. Clone your fork locally:
    ```bash
-   git clone https://github.com/<your-username>/<repo-name>.git
-   cd <repo-name>
+   git clone https://github.com/<your-username>/vault-zero-knowledge.git
+   cd vault-zero-knowledge
    ```
 3. Create a descriptive feature branch:
    ```bash
    git checkout -b feature/your-feature-name
    ```
-
-## Development Standards
-
-* **Clean Code**: Follow idiomatic patterns for the project language.
-* **Testing**: Ensure existing test suites pass and write new tests for added functionality.
-* **Documentation**: Update relevant README or API docs if altering functional behavior.
-* **Commit Messages**: Write concise, imperative commit messages (e.g. `feat: add request timeout handler`).
-
-## Submitting Pull Requests
-
-1. Rebase your branch against the latest `main` branch.
-2. Push changes to your fork.
-3. Open a Pull Request against `main` with a clear description of the problem solved and test results.
-
-## Reporting Bugs
-
-Please search existing issues before opening a new bug report. Use the provided bug report template to supply reproducible steps, system details, and expected outcomes.
+4. Build and verify locally:
+   ```bash
+   node build.js
+   ```
+5. Submit a Pull Request targeting `main`. Complete the mandatory security checklist in the pull request template.
