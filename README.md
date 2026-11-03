@@ -1,14 +1,14 @@
 <div align="center">
-  <h1>vault-password-manager</h1>
+  <h1>vault-zero-knowledge</h1>
   <p>Zero-knowledge client-side password vault with WebCrypto AES-256-GCM encryption, PBKDF2 key derivation, and offline persistence.</p>
 
   <p>
-    <a href="https://github.com/itsgoharrehman/vault-password-manager/releases"><img src="https://img.shields.io/github/v/release/itsgoharrehman/vault-password-manager?style=flat-square&logo=github&logoColor=white" alt="Release"></a>
-    <a href="LICENSE"><img src="https://img.shields.io/github/license/itsgoharrehman/vault-password-manager?style=flat-square&logo=opensourceinitiative&logoColor=white" alt="License"></a>
+    <a href="https://github.com/itsgoharrehman/vault-zero-knowledge/releases"><img src="https://img.shields.io/github/v/release/itsgoharrehman/vault-zero-knowledge?style=flat-square&logo=github&logoColor=white" alt="Release"></a>
+    <a href="LICENSE"><img src="https://img.shields.io/github/license/itsgoharrehman/vault-zero-knowledge?style=flat-square&logo=opensourceinitiative&logoColor=white" alt="License"></a>
     <img src="https://img.shields.io/badge/Encryption-AES--256--GCM-2ea44f?style=flat-square&logo=lock&logoColor=white" alt="Encryption">
     <img src="https://img.shields.io/badge/Runtime-W3C_WebCrypto-0969da?style=flat-square&logo=w3c&logoColor=white" alt="WebCrypto">
-    <a href="https://github.com/itsgoharrehman/vault-password-manager/stargazers"><img src="https://img.shields.io/github/stars/itsgoharrehman/vault-password-manager?style=flat-square&logo=github&logoColor=white" alt="Stars"></a>
-    <a href="https://github.com/itsgoharrehman/vault-password-manager/issues"><img src="https://img.shields.io/github/issues/itsgoharrehman/vault-password-manager?style=flat-square&logo=github&logoColor=white" alt="Issues"></a>
+    <a href="https://github.com/itsgoharrehman/vault-zero-knowledge/stargazers"><img src="https://img.shields.io/github/stars/itsgoharrehman/vault-zero-knowledge?style=flat-square&logo=github&logoColor=white" alt="Stars"></a>
+    <a href="https://github.com/itsgoharrehman/vault-zero-knowledge/issues"><img src="https://img.shields.io/github/issues/itsgoharrehman/vault-zero-knowledge?style=flat-square&logo=github&logoColor=white" alt="Issues"></a>
   </p>
 </div>
 
@@ -82,8 +82,8 @@ All fields ending with `_enc` store Base64-encoded ciphertext produced by the We
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/itsgoharrehman/vault-password-manager.git
-cd vault-password-manager
+git clone https://github.com/itsgoharrehman/vault-zero-knowledge.git
+cd vault-zero-knowledge
 ```
 
 ### 2. Configure Environment
